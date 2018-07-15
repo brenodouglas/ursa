@@ -1,6 +1,6 @@
 {
   "name": "ursa-optional",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "keywords": [
     "crypto",
     "key",
@@ -16,23 +16,11 @@
     "digest"
   ],
   "description": "RSA public/private key OpenSSL bindings for node and io.js",
-  "homepage": "https://github.com/quartzjer/ursa",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/quartzjer/ursa.git"
-  },
   "license": "Apache-2.0",
-  "author": {
-    "name": "Dan Bornstein",
-    "email": "danfuzz@milk.com",
-    "url": "http://www.milk.com/"
-  },
+  "author": "Dan Bornstein <danfuzz@milk.com> (http://www.milk.com/)",
   "maintainers": [
-    {
-      "name": "Jeremie Miller",
-      "email": "jeremie@jabber.org",
-      "url": "http://jeremie.com/"
-    }
+    "Jeremie Miller <jeremie@jabber.org> (http://jeremie.com/)",
+    "Maciej Krüger <mkg20001@gmail.com> (https://mkg20001.io/)"
   ],
   "main": "lib/ursa.js",
   "engines": {
@@ -41,7 +29,7 @@
   "scripts": {
     "test": "mocha --recursive --reporter spec",
     "test-watch": "npm test -- -w --reporter min",
-    "install": "npm run rebuild || echo \"ursaNative bindings compilation fail. Modules that depend on it must use fallbacks.\"",
+    "install": "node rebuild.js",
     "rebuild": "node-gyp rebuild"
   },
   "dependencies": {
@@ -50,5 +38,17 @@
   },
   "devDependencies": {
     "mocha": "^5.2.0"
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkg20001/ursa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkg20001/ursa/issues"
+  },
+  "homepage": "https://github.com/mkg20001/ursa#readme"
 }
