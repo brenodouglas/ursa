@@ -23,6 +23,9 @@
     "Maciej Krüger <mkg20001@gmail.com> (https://mkg20001.io/)"
   ],
   "main": "lib/ursa.js",
+  "browser": {
+    "lib/ursa.js": "./browser.js"
+  },
   "engines": {
     "node": ">=4"
   },
